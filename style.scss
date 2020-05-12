@@ -3,11 +3,11 @@
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 24px;
-}
-.column__cat {
-  width: 100px;
-  height: 100px;
-  border: 1px solid;
-  background: red;
-  box-shadow: 10px 10px 15px -10px;
+  .column__cat {
+    width: 100px;
+    height: 100px;
+    border: 1px solid;
+    background: red;
+    box-shadow: 10px 10px 15px -10px;
+  }
 }
