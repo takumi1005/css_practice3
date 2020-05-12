@@ -1,35 +1,7 @@
-.wrapper {
-  width: 300px;
-  margin: auto;
-}
-
-.wrapper .column {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 24px;
-}
-
-.column--two .column__cat {
-  width: calc(50% - 8px);
-}
-
-.column--three .column__cat {
-  width: calc((100% / 3) - 8px);
-}
-
 .column__cat {
-  width: 100px;
-  height: 100px;
+  width: 300px;
+  height: 300px;
   border: 1px solid;
-  background: red;
-  box-shadow: 10px 10px 15px -10px;
-}
-
-.column .column__cat {
-  margin-right: 8px;
-}
-
-.column .column__cat :last-child {
-  margin: 0;
+  border-radius: 50%;
+  background-color: red;
 }
