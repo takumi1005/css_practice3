@@ -3,7 +3,7 @@
 //   flex-wrap: wrap;
 //   justify-content: center;
 //   margin-top: 24px;
-//   .column__cat {
+//   &__cat {
 //     width: 100px;
 //     height: 100px;
 //     border: 1px solid;
@@ -37,15 +37,55 @@
 // }
 // .column .column__cat {
 //   margin-right: 8px;
-//   :last-child {
+//   &:last-child {
 //     margin: 0;
 //   }
 // }
 
-.column__cat {
+// .column__cat {
+//   width: 300px;
+//   height: 300px;
+//   border: 1px solid;
+//   border-radius: 50%;
+//   background-color: red;
+// }
+
+.ball__wrap {
+  position: relative;
   width: 300px;
   height: 300px;
   border: 1px solid;
-  border-radius: 50%;
-  background-color: red;
+  .ball {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border: 1px solid;
+    border-radius: 50%;
+    &--one {
+      top: 0;
+      left: 0;
+      background-color: red;
+    }
+    &--two {
+      top: 0;
+      right: 0;
+      background-color: blue;
+    }
+    &--three {
+      bottom: 0;
+      left: 0;
+      background-color: yellow;
+    }
+    &--four {
+      bottom: 0;
+      right: 0;
+      background-color: green;
+    }
+    &--five {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: purple;
+    }
+  }
 }

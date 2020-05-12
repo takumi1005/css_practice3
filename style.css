@@ -1,7 +1,45 @@
-.column__cat {
+.ball__wrap {
+  position: relative;
   width: 300px;
   height: 300px;
   border: 1px solid;
+}
+
+.ball__wrap .ball {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border: 1px solid;
   border-radius: 50%;
+}
+
+.ball__wrap .ball--one {
+  top: 0;
+  left: 0;
   background-color: red;
+}
+
+.ball__wrap .ball--two {
+  top: 0;
+  right: 0;
+  background-color: blue;
+}
+
+.ball__wrap .ball--three {
+  bottom: 0;
+  left: 0;
+  background-color: yellow;
+}
+
+.ball__wrap .ball--four {
+  bottom: 0;
+  right: 0;
+  background-color: green;
+}
+
+.ball__wrap .ball--five {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: purple;
 }
