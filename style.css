@@ -261,63 +261,82 @@ tr.borderNon + tr > td:before {
 }
 table tr:last-child {
   border-bottom: none;
-}*/
+}
+
 label {
   position: relative;
 }
-
 span {
   display: inline-block;
   width: 25px;
   height: 17px;
+  i {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    display: block;
+    transition: all 0.3s ease-in-out;
+    &:nth-child(1) {
+      top: 0;
+    }
+    &:nth-child(2) {
+      margin: auto;
+      top: 0;
+      bottom: 0;
+    }
+    &:nth-child(3) {
+      bottom: 0;
+    }
+  }
 }
-
-span i {
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: #000;
-  display: block;
-  transition: all 0.3s ease-in-out;
-}
-
-span i:nth-child(1) {
-  top: 0;
-}
-
-span i:nth-child(2) {
-  margin: auto;
-  top: 0;
-  bottom: 0;
-}
-
-span i:nth-child(3) {
-  bottom: 0;
-}
-
 input {
   display: none;
+  &:checked + label span i:nth-child(1) {
+    margin: auto;
+    transform: rotate(45deg);
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 0;
+  }
+  &:checked + label span i:nth-child(2) {
+    transform: rotateX(90deg);
+    top: 0;
+    bottom: 0;
+  }
+  &:checked + label span i:nth-child(3) {
+    margin: auto;
+    transform: rotate(-45deg);
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+}*/
+html {
+  scroll-behavior: smooth;
 }
 
-input:checked + label span i:nth-child(1) {
-  margin: auto;
-  transform: rotate(45deg);
-  right: 0;
-  bottom: 0;
-  left: 0;
-  top: 0;
+body {
+  padding: 48px;
 }
 
-input:checked + label span i:nth-child(2) {
-  transform: rotateX(90deg);
-  top: 0;
-  bottom: 0;
+section {
+  margin-bottom: 60px;
 }
 
-input:checked + label span i:nth-child(3) {
-  margin: auto;
-  transform: rotate(-45deg);
-  top: 0;
-  right: 0;
-  bottom: 0;
+ul {
+  display: flex;
+  margin-bottom: 32px;
+}
+
+li {
+  margin-right: 16px;
+  list-style: none;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 12px;
 }
