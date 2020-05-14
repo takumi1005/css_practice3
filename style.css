@@ -1,45 +1,133 @@
+/*.column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 24px;
+  &__cat {
+    width: 100px;
+    height: 100px;
+    border: 1px solid;
+    background: red;
+    box-shadow: 10px 10px 15px -10px;
+  }
+}
+
+.wrapper {
+  width: 300px;
+  margin: auto;
+  .column {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 24px;
+  }
+}
+.column--two .column__cat {
+  width: calc(50% - 8px);
+}
+.column--three .column__cat {
+  width: calc((100% / 3) - 8px);
+}
+.column__cat {
+  width: 100px;
+  height: 100px;
+  border: 1px solid;
+  background: red;
+  box-shadow: 10px 10px 15px -10px;
+}
+.column .column__cat {
+  margin-right: 8px;
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.column__cat {
+  width: 300px;
+  height: 300px;
+  border: 1px solid;
+  border-radius: 50%;
+  background-color: red;
+}
+
 .ball__wrap {
   position: relative;
   width: 300px;
   height: 300px;
   border: 1px solid;
+  .ball {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border: 1px solid;
+    border-radius: 50%;
+    &--one {
+      top: 0;
+      left: 0;
+      background-color: red;
+    }
+    &--two {
+      top: 0;
+      right: 0;
+      background-color: blue;
+    }
+    &--three {
+      bottom: 0;
+      left: 0;
+      background-color: yellow;
+    }
+    &--four {
+      bottom: 0;
+      right: 0;
+      background-color: green;
+    }
+    &--five {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: purple;
+    }
+  }
+}*/
+ul,
+li {
+  list-style: none;
 }
 
-.ball__wrap .ball {
-  position: absolute;
-  width: 150px;
-  height: 150px;
+.card-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-wrap .card {
   border: 1px solid;
-  border-radius: 50%;
+  margin-right: 8px;
+  margin-bottom: 16px;
+  width: calc((100% / 3) - 8px);
 }
 
-.ball__wrap .ball--one {
-  top: 0;
-  left: 0;
-  background-color: red;
+.card-wrap .card:nth-child(3n) {
+  margin-right: 0;
 }
 
-.ball__wrap .ball--two {
-  top: 0;
-  right: 0;
-  background-color: blue;
+.card-wrap .card__title {
+  font-weight: bold;
+  font-size: 16px;
+  padding: 8px;
 }
 
-.ball__wrap .ball--three {
-  bottom: 0;
-  left: 0;
-  background-color: yellow;
+.card-wrap .card__text {
+  padding: 10px;
+  font-size: 12px;
 }
 
-.ball__wrap .ball--four {
-  bottom: 0;
-  right: 0;
-  background-color: green;
+.card-wrap .card__img {
+  width: 100%;
+  height: 100px;
+  background-color: #0e6edf;
 }
 
-.ball__wrap .ball--five {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: purple;
+.card-wrap .dammy {
+  border: none;
 }
