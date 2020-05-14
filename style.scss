@@ -88,7 +88,7 @@
       background-color: purple;
     }
   }
-}*/
+}
 ul,
 li {
   list-style: none;
@@ -122,5 +122,19 @@ li {
   }
   .dammy {
     border: none;
+  }
+}*/
+
+div,
+p {
+  margin: 0;
+  padding: 0;
+}
+div {
+  overflow: hidden;
+  p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
   }
 }
