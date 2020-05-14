@@ -146,7 +146,7 @@ p {
     color: blue;
     vertical-align: -10px;
   }
-}*/
+}
 
 body {
   overflow-y: scroll;
@@ -163,4 +163,15 @@ header {
   color: #fff;
   font-size: 20px;
   background-color: #00a2d4;
+}*/
+
+.wrap {
+  background-color: #000;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  .logo {
+    display: inline-block;
+  }
 }
