@@ -174,8 +174,25 @@ header {
   .logo {
     display: inline-block;
   }
-}*/
+}
 
 input:checked + label {
   background: linear-gradient(transparent 70%, yellow 0);
+}*/
+
+.img-area {
+  background-color: #000;
+  display: inline-block;
+  img {
+    width: 80%;
+    display: block;
+    margin: auto;
+    transition: 1s;
+  }
+}
+input[type="checkbox"] {
+  display: none;
+  &:checked ~ .img-area img {
+    width: 100%;
+  }
 }
