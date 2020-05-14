@@ -1,1 +1,1 @@
-p{line-height:30px}p:first-letter{font-size:3em;color:blue;vertical-align:-10px}
+body{overflow-y:scroll;height:2000px;background:#ccc}header{position:fixed;top:0;left:0;width:100%;text-align:center;padding:20px 0;color:#fff;font-size:20px;background-color:#00a2d4}
