@@ -178,7 +178,7 @@ header {
 
 input:checked + label {
   background: linear-gradient(transparent 70%, yellow 0);
-}*/
+}
 
 .img-area {
   background-color: #000;
@@ -195,4 +195,15 @@ input[type="checkbox"] {
   &:checked ~ .img-area img {
     width: 100%;
   }
+}*/
+
+.seven {
+  font-size: 10px;
+  transform: scale(0.7);
+  transform-origin: 0px 0px;
+}
+.five {
+  font-size: 10px;
+  transform: scale(0.5);
+  transform-origin: 0px 0px;
 }
