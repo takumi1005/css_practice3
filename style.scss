@@ -163,7 +163,7 @@ header {
   color: #fff;
   font-size: 20px;
   background-color: #00a2d4;
-}*/
+}
 
 .wrap {
   background-color: #000;
@@ -174,4 +174,8 @@ header {
   .logo {
     display: inline-block;
   }
+}*/
+
+input:checked + label {
+  background: linear-gradient(transparent 70%, yellow 0);
 }
