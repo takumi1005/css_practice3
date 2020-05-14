@@ -93,6 +93,8 @@ ul,
 li {
   list-style: none;
 }
+
+5月13~
 .card-wrap {
   display: flex;
   flex-wrap: wrap;
@@ -195,7 +197,7 @@ input[type="checkbox"] {
   &:checked ~ .img-area img {
     width: 100%;
   }
-}*/
+}
 
 .seven {
   font-size: 10px;
@@ -206,4 +208,56 @@ input[type="checkbox"] {
   font-size: 10px;
   transform: scale(0.5);
   transform-origin: 0px 0px;
+}*/
+
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body {
+  padding: 24px;
+}
+th:nth-child(1),
+td:nth-child(1) {
+  background-color: #e7e7e7;
+}
+td,
+th {
+  padding: 4px;
+}
+tbody {
+  border: 1px solid;
+}
+tr {
+  border-bottom: 1px solid;
+}
+tr.borderNon {
+  border: none;
+}
+tr.borderNon td + td {
+  border-bottom: 1px solid;
+}
+tr.borderNon + tr > td {
+  position: relative;
+  height: 33px;
+}
+tr.borderNon + tr > td:before {
+  content: "カテゴリ";
+  position: absolute;
+  top: calc(50% - 4px);
+  right: -32px;
+  transform: translateY(-50%);
+}
+table tr:last-child {
+  border-bottom: none;
 }
