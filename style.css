@@ -687,13 +687,13 @@ div {
   height: 100vh;
 }
 
-.snap-area {
+div .snap-area {
   position: relative;
   scroll-snap-align: start;
   height: 100vh;
 }
 
-.snap-area::before {
+div .snap-area::before {
   content: "";
   display: inline-block;
   width: 375px;
@@ -707,22 +707,22 @@ div {
   transform: translate(-50%, -50%);
 }
 
-.snap-area--red {
+div .snap-area--red {
   background-color: red;
 }
 
-.snap-area--blue {
+div .snap-area--blue {
   background-color: blue;
 }
 
-.snap-area--yellow {
+div .snap-area--yellow {
   background-color: yellow;
 }
 
-.snap-area--green {
+div .snap-area--green {
   background-color: green;
 }
 
-.snap-area--pink {
+div .snap-area--pink {
   background-color: pink;
 }
