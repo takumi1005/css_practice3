@@ -580,7 +580,7 @@ h2 {
   height: 80%;
   margin: 3% -10% 0;
   z-index: -1;
-} */
+}
 
 // cssのみでアコーディオン実装
 section {
@@ -623,4 +623,16 @@ section {
   opacity: 1;
   padding: 10px;
   visibility: visible;
+}　 */
+
+// マルチボーダーを設定
+.background-border {
+  width: 500px;
+  height: 500px;
+  background-color: #0e6edf;
+  background-image: linear-gradient(90deg, red 30%, transparent 0%),
+    linear-gradient(90deg, blue 30%, transparent 0%),
+    linear-gradient(90deg, green 30%, transparent 0%),
+    linear-gradient(90deg, white 30%, transparent 0%);
+  background-size: 60px, 30px, 50px, 80px;
 }
