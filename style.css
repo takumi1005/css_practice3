@@ -360,7 +360,7 @@ h2 {
   top: 0;
 }
 
-14日〜
+// 15日〜
 // レスポンシブ　PC/SP時の挙動変更
 section {
   text-align: center;
@@ -504,79 +504,72 @@ div {
     color: #fff;
     z-index: 1;
   }
-} */
+}
+
+// sectionを斜めに区切る
 body {
   width: 500px;
   margin: auto;
   text-align: center;
 }
-
 h1 {
   position: relative;
   font-weight: bold;
   font-size: 24px;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    margin: auto;
+    background: #fe2e2e;
+    transform-origin: bottom;
+    transform: rotate(-3deg);
+    z-index: -1;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    margin: auto;
+    background: #0e6edf;
+    transform-origin: bottom;
+    transform: rotate(3deg);
+    z-index: -1;
+  }
 }
-
-h1::before {
-  content: "";
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  margin: auto;
-  background: #fe2e2e;
-  transform-origin: bottom;
-  transform: rotate(-3deg);
-  z-index: -1;
-}
-
-h1::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  margin: auto;
-  background: #0e6edf;
-  transform-origin: bottom;
-  transform: rotate(3deg);
-  z-index: -1;
-}
-
 h2 {
   text-align: left;
   font-weight: bold;
   font-size: 18px;
 }
-
 .section-wrap {
   margin: 24px 0;
   padding: 65px 0;
 }
-
 .section {
   position: relative;
   overflow: hidden;
   color: #fff;
   margin: 24px 0;
   padding: 65px 0;
+  &--cat1::before {
+    background: #0e6edf;
+    -ms-transform-origin: left center;
+    transform-origin: left center;
+    transform: rotate(3deg);
+  }
+  &--cat2::before {
+    background: #fe2e2e;
+    transform-origin: right center;
+    transform: rotate(-3deg);
+  }
 }
-
-.section--cat1::before {
-  background: #0e6edf;
-  -ms-transform-origin: left center;
-  transform-origin: left center;
-  transform: rotate(3deg);
-}
-
-.section--cat2::before {
-  background: #fe2e2e;
-  transform-origin: right center;
-  transform: rotate(-3deg);
-}
-
 .section--cat1::before,
 .section--cat2::before {
   content: "";
@@ -587,4 +580,54 @@ h2 {
   height: 80%;
   margin: 3% -10% 0;
   z-index: -1;
+} */
+section {
+  display: inline-block;
+}
+
+.checkbox-input {
+  display: none;
+}
+
+.checkbox-lavel {
+  cursor: pointer;
+  display: inline-block;
+  padding: 16px;
+  background-color: #0e6edf;
+  color: #fff;
+}
+
+.checkbox-lavel--red {
+  background-color: red;
+}
+
+.checkbox-lavel--green {
+  background-color: green;
+}
+
+.checkbox-lavel::before {
+  content: "▼";
+  padding-right: 4px;
+}
+
+.checkbox-input:checked + .checkbox-lavel::before {
+  content: "ー";
+}
+
+.accordion-cat {
+  margin: 0 0 2px 0;
+}
+
+.accordion-cat li {
+  max-height: 0;
+  overflow-y: hidden;
+  transition: all 0.5s;
+  text-align: center;
+}
+
+.checkbox-input:checked + .checkbox-lavel + .accordion-cat > li {
+  max-height: 46px;
+  opacity: 1;
+  padding: 10px;
+  visibility: visible;
 }
