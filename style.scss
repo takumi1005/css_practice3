@@ -405,10 +405,10 @@ h1 {
       margin: 0 auto 12px;
       order: 1;
     }
-    .card-img {
+    &-img {
       order: 3;
     }
-    .card-sentence {
+    &-sentence {
       order: 2;
     }
   }
