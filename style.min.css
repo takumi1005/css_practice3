@@ -1,1 +1,1 @@
-@keyframes changecolor{from{color:blue}to{color:red}}p{animation:changecolor 2s linear 0s 1 forwards}
+label{color:blue;transition:all 1s}input:checked+label{color:red}

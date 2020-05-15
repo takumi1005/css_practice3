@@ -420,7 +420,8 @@ h1 {
   height: 340px;
   background: conic-gradient(red 0% 25%, yellow 25% 50%, blue 50% 100%);
   border-radius: 50%;
-} */
+}
+
 @keyframes changecolor {
   from {
     color: blue;
@@ -429,7 +430,14 @@ h1 {
     color: red;
   }
 }
-
 p {
   animation: changecolor 2s linear 0s 1 forwards;
+} */
+label {
+  color: blue;
+  transition: all 1s;
+}
+
+input:checked + label {
+  color: red;
 }
