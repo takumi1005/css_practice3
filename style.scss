@@ -343,7 +343,7 @@ h2 {
   position: sticky;
   top: 0;
 }
-
+14日〜
 section {
   text-align: center;
 }
@@ -366,7 +366,7 @@ h1 {
   .pc-on {
     display: none;
   }
-} */
+} 
 
 .wrapper {
   overflow-y: auto;
@@ -376,5 +376,40 @@ h1 {
   .wrapper {
     width: auto !important;
     height: auto;
+  }
+}　*/
+
+.card {
+  width: 300px;
+  margin: auto;
+  border: 1px solid #8d8d8d;
+  padding: 8px;
+  h2 {
+    text-align: center;
+  }
+  &-img {
+    width: 100%;
+    height: 150px;
+    background: red;
+    margin: 24px 0;
+    .card-sentence {
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .card {
+    display: flex;
+    flex-wrap: wrap;
+    h2 {
+      margin: 0 auto 12px;
+      order: 1;
+    }
+    .card-img {
+      order: 3;
+    }
+    .card-sentence {
+      order: 2;
+    }
   }
 }
