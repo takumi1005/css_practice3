@@ -342,7 +342,7 @@ h2 {
   padding: 10px 20px;
   position: sticky;
   top: 0;
-}*/
+}
 
 section {
   text-align: center;
@@ -365,5 +365,16 @@ h1 {
   }
   .pc-on {
     display: none;
+  }
+} */
+
+.wrapper {
+  overflow-y: auto;
+  height: 450px;
+}
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: auto !important;
+    height: auto;
   }
 }

@@ -1,1 +1,1 @@
-section{text-align:center}h1{color:red}.sp-on{display:none}.pc-on{display:block}@media screen and (max-width: 767px){h1{color:green}.sp-on{display:block}.pc-on{display:none}}
+.wrapper{overflow-y:auto;height:450px}@media screen and (max-width: 768px){.wrapper{width:auto !important;height:auto}}
