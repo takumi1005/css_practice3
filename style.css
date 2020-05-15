@@ -680,49 +680,83 @@ section {
     height: 100%;
     background-color: rgba(30, 30, 30, 0.9);
   }
-} */
+}
+
+// ピタッと止まるスクロールスナップ
 div {
   overflow: auto;
   scroll-snap-type: y mandatory;
   height: 100vh;
+  .snap-area {
+    position: relative;
+    scroll-snap-align: start;
+    height: 100vh;
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 375px;
+      height: 200px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url(https://ninjacode.work/assets/img/kv.png);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .snap-area--red {
+    background-color: red;
+  }
+  .snap-area--blue {
+    background-color: blue;
+  }
+  .snap-area--yellow {
+    background-color: yellow;
+  }
+  .snap-area--green {
+    background-color: green;
+  }
+  .snap-area--pink {
+    background-color: pink;
+  }
+} */
+.calender {
+  width: 150px;
+  height: 150px;
+  margin: auto;
 }
 
-div .snap-area {
-  position: relative;
-  scroll-snap-align: start;
-  height: 100vh;
-}
-
-div .snap-area::before {
-  content: "";
-  display: inline-block;
-  width: 375px;
-  height: 200px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url(https://ninjacode.work/assets/img/kv.png);
+.calender .part {
   position: absolute;
-  top: 50%;
+}
+
+.calender__wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: powderblue;
+}
+
+.calender__wrap__day {
+  font-size: 5.3em;
+  font-weight: bold;
+  top: 4px;
+  left: 4px;
+}
+
+.calender__wrap__month {
+  bottom: 0;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
+  font-size: 1.8em;
+  font-weight: bold;
 }
 
-div .snap-area--red {
-  background-color: red;
-}
-
-div .snap-area--blue {
-  background-color: blue;
-}
-
-div .snap-area--yellow {
-  background-color: yellow;
-}
-
-div .snap-area--green {
-  background-color: green;
-}
-
-div .snap-area--pink {
-  background-color: pink;
+.calender__wrap__year {
+  top: 16px;
+  right: 0;
+  font-size: 1.5em;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
 }
