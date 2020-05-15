@@ -720,43 +720,70 @@ div {
   .snap-area--pink {
     background-color: pink;
   }
-} */
+}
+
+// 回転文字表記
 .calender {
   width: 150px;
   height: 150px;
   margin: auto;
+  .part {
+    position: absolute;
+  }
+  &__wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: powderblue;
+    &__day {
+      font-size: 5.3em;
+      font-weight: bold;
+      top: 4px;
+      left: 4px;
+    }
+    &__month {
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+    &__year {
+      top: 16px;
+      right: 0;
+      font-size: 1.5em;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+    }
+  }
+} */
+.clover-cat {
+  display: flex;
+  flex-wrap: wrap;
+  width: 420px;
+  margin: 20px auto;
 }
 
-.calender .part {
-  position: absolute;
+.clover-cat span {
+  display: inline-block;
+  background-color: green;
+  margin: 5px;
+  width: 200px;
+  height: 200px;
 }
 
-.calender__wrap {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background-color: powderblue;
+.clover-cat__part--one {
+  border-radius: 50% 50% 0 50%;
 }
 
-.calender__wrap__day {
-  font-size: 5.3em;
-  font-weight: bold;
-  top: 4px;
-  left: 4px;
+.clover-cat__part--two {
+  border-radius: 50% 50% 50% 0;
 }
 
-.calender__wrap__month {
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 1.8em;
-  font-weight: bold;
+.clover-cat__part--three {
+  border-radius: 50% 0 50% 50%;
 }
 
-.calender__wrap__year {
-  top: 16px;
-  right: 0;
-  font-size: 1.5em;
-  writing-mode: vertical-rl;
-  text-orientation: upright;
+.clover-cat__part--four {
+  border-radius: 0 50% 50% 50%;
 }

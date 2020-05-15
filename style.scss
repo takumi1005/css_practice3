@@ -720,7 +720,7 @@ div {
   .snap-area--pink {
     background-color: pink;
   }
-} */
+}
 
 // 回転文字表記
 .calender {
@@ -755,5 +755,32 @@ div {
       writing-mode: vertical-rl;
       text-orientation: upright;
     }
+  }
+} */
+
+// 四葉のクローバーを実装
+.clover-cat {
+  display: flex;
+  flex-wrap: wrap;
+  width: 420px;
+  margin: 20px auto;
+  span {
+    display: inline-block;
+    background-color: green;
+    margin: 5px;
+    width: 200px;
+    height: 200px;
+  }
+  &__part--one {
+    border-radius: 50% 50% 0 50%;
+  }
+  &__part--two {
+    border-radius: 50% 50% 50% 0;
+  }
+  &__part--three {
+    border-radius: 50% 0 50% 50%;
+  }
+  &__part--four {
+    border-radius: 0 50% 50% 50%;
   }
 }
