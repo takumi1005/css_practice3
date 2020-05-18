@@ -783,9 +783,10 @@ div {
   &__part--four {
     border-radius: 0 50% 50% 50%;
   }
-} */
+}
 
 // 18~
+// 縦に回るボックスアニメーション
 .box-cat {
   width: 300px;
   color: #fff;
@@ -848,4 +849,111 @@ p {
 }
 #red:checked ~ .box-cat__cube {
   transform: rotateX(90deg);
+} */
+
+// ハンバーガーメニュー
+body {
+  padding: 24px;
+}
+input {
+  display: none;
+}
+label {
+  position: relative;
+  float: right;
+  clear: both;
+}
+span {
+  display: inline-block;
+  width: 35px;
+  height: 25px;
+  i {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    display: block;
+    transition: all 0.3s ease-in-out;
+    &:nth-child(1) {
+      top: 0;
+    }
+    &:nth-child(2) {
+      margin: auto;
+      top: 0;
+      bottom: 0;
+    }
+    &:nth-child(3) {
+      bottom: 0;
+    }
+  }
+}
+input:checked + label span i:nth-child(1) {
+  margin: auto;
+  transform: rotate(45deg);
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: 0;
+}
+input:checked + label span i:nth-child(2) {
+  transform: rotateX(90deg);
+  top: 0;
+  bottom: 0;
+}
+input:checked + label span i:nth-child(3) {
+  margin: auto;
+  transform: rotate(-45deg);
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+input:checked + label + .ninja__hamburger {
+  position: fixed;
+  z-index: 99;
+  opacity: 1;
+}
+.ninja__hamburger {
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  top: 80px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-transition: opacity 0.3s ease-in-out, z-index 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, z-index 0.3s ease-in-out;
+  &__wrap {
+    width: 520px;
+    background-color: #000;
+    position: absolute;
+    right: -100%;
+    top: 80px;
+    bottom: 0;
+    -webkit-transition: right 0.3s ease-in-out;
+    transition: right 0.3s ease-in-out;
+    overflow-y: scroll;
+  }
+}
+input:checked + label + .ninja__hamburger > .ninja__hamburger__wrap {
+  right: 0;
+  top: 0;
+}
+ul {
+  margin: 0;
+}
+li {
+  border-bottom: 1px solid #fff;
+}
+a {
+  padding: 0 50px;
+  color: #fff;
+  font-size: 24px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-weight: 700;
+  line-height: 1;
+  transition: background-color 0.3s ease-in-out;
 }
