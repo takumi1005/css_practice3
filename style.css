@@ -956,11 +956,12 @@ a {
   font-weight: 700;
   line-height: 1;
   transition: background-color 0.3s ease-in-out;
-} */
+}
+
+// スタンプアニメーションを展開
 input {
   display: none;
 }
-
 .stamp-box {
   display: inline-flex;
   align-items: center;
@@ -968,7 +969,6 @@ input {
   height: 80px;
   border: 1px solid;
 }
-
 .test {
   position: relative;
   display: inline-block;
@@ -986,20 +986,71 @@ input {
   -webkit-transform: scale(10) rotate(-30deg);
   transform: scale(10) rotate(-30deg);
   transition: all 0.5s ease-in 0s;
+  span {
+    position: absolute;
+    width: 2em;
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
-
-.test span {
-  position: absolute;
-  width: 2em;
-  font-weight: bold;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 input:checked ~ .stamp-box > .test {
   visibility: visible;
   opacity: 1;
   -webkit-transform: scale(1) rotate(0deg);
   transform: scale(1) rotate(0deg);
+} */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  margin: 16px 0;
+}
+
+.block {
+  border: 1px solid;
+  width: 640px;
+  margin: auto;
+}
+
+.block-wrap {
+  overflow: hidden;
+  padding: 48px;
+}
+
+.block-tag {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  float: left;
+  width: 70%;
+}
+
+.block-tag li {
+  background-color: cornflowerblue;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 20px;
+  margin: 0 8px 8px 0;
+}
+
+.block-icon {
+  display: flex;
+  justify-content: flex-end;
+  float: right;
+  width: 30%;
+}
+
+.block-icon li {
+  font-size: 30px;
+  margin-right: 12px;
+}
+
+.block-icon li:last-child {
+  margin-right: 0;
 }
