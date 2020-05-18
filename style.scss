@@ -849,7 +849,7 @@ p {
 }
 #red:checked ~ .box-cat__cube {
   transform: rotateX(90deg);
-} */
+}
 
 // ハンバーガーメニュー
 body {
@@ -956,4 +956,48 @@ a {
   font-weight: 700;
   line-height: 1;
   transition: background-color 0.3s ease-in-out;
+} */
+
+// スタンプアニメーションを展開
+input {
+  display: none;
+}
+.stamp-box {
+  display: inline-flex;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  border: 1px solid;
+}
+.test {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #e4007f;
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  border: 1px solid #e4007f;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: scale(10) rotate(-30deg);
+  transform: scale(10) rotate(-30deg);
+  transition: all 0.5s ease-in 0s;
+  span {
+    position: absolute;
+    width: 2em;
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+input:checked ~ .stamp-box > .test {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: scale(1) rotate(0deg);
+  transform: scale(1) rotate(0deg);
 }
