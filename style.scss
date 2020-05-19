@@ -1088,7 +1088,7 @@ h1 {
 }
 .checkbox-input:checked + .checkbox-parts::before {
   border: 2px solid red;
-} */
+}
 
 // フェーズ毎のアニメーションを実装
 @keyframes movebox {
@@ -1126,4 +1126,32 @@ div {
     background-color: red;
     animation: movebox 5s linear 0s 1 forwards;
   }
+} */
+
+// 要素を回したり止めたりする
+@keyframes spinbox {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+input[type="checkbox"] ~ label > div {
+  width: 200px;
+  height: 100px;
+  border: 1px solid #000;
+  background-color: red;
+  animation: spinbox 1s linear 0s infinite forwards paused;
+  margin-top: 100px;
+}
+input[type="checkbox"]:checked ~ label > div {
+  width: 200px;
+  height: 100px;
+  border: 1px solid #000;
+  background-color: red;
+  animation: spinbox 1s linear 0s infinite forwards;
+}
+input {
+  display: none;
 }
