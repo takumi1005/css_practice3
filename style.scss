@@ -1000,7 +1000,7 @@ input:checked ~ .stamp-box > .test {
   opacity: 1;
   -webkit-transform: scale(1) rotate(0deg);
   transform: scale(1) rotate(0deg);
-} */
+}
 
 // アイコンやタグの設置
 ul {
@@ -1047,4 +1047,45 @@ h1 {
       }
     }
   }
+} */
+
+// チェックボックスのカスタム
+.checkbox {
+  text-align: center;
+  color: #79808a;
+  margin-top: 60px;
+  &-input {
+    display: none;
+  }
+  &-parts {
+    position: relative;
+    padding-left: 38px;
+    cursor: pointer;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -5px;
+      left: 0;
+      width: 23px;
+      height: 23px;
+      border: 2px solid #79808a;
+      border-radius: 4px;
+    }
+  }
+}
+.checkbox-input:checked + .checkbox-parts::after {
+  display: block;
+  position: absolute;
+  top: -2px;
+  left: 13px;
+  width: 11px;
+  height: 19px;
+  transform: rotate(40deg);
+  border-right: 3px solid red;
+  border-bottom: 3px solid red;
+  content: "";
+}
+.checkbox-input:checked + .checkbox-parts::before {
+  border: 2px solid red;
 }

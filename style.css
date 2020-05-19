@@ -1000,57 +1000,95 @@ input:checked ~ .stamp-box > .test {
   opacity: 1;
   -webkit-transform: scale(1) rotate(0deg);
   transform: scale(1) rotate(0deg);
-} */
+}
+
+// アイコンやタグの設置
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
 h1 {
   text-align: center;
   margin: 16px 0;
 }
-
 .block {
   border: 1px solid;
   width: 640px;
   margin: auto;
+  &-wrap {
+    overflow: hidden;
+    padding: 48px;
+  }
+  &-tag {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    float: left;
+    width: 70%;
+    li {
+      background-color: cornflowerblue;
+      color: #fff;
+      padding: 5px 15px;
+      border-radius: 20px;
+      margin: 0 8px 8px 0;
+    }
+  }
+  &-icon {
+    display: flex;
+    justify-content: flex-end;
+    float: right;
+    width: 30%;
+    li {
+      font-size: 30px;
+      margin-right: 12px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+} */
+.checkbox {
+  text-align: center;
+  color: #79808a;
+  margin-top: 60px;
 }
 
-.block-wrap {
-  overflow: hidden;
-  padding: 48px;
+.checkbox-input {
+  display: none;
 }
 
-.block-tag {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  float: left;
-  width: 70%;
+.checkbox-parts {
+  position: relative;
+  padding-left: 38px;
+  cursor: pointer;
 }
 
-.block-tag li {
-  background-color: cornflowerblue;
-  color: #fff;
-  padding: 5px 15px;
-  border-radius: 20px;
-  margin: 0 8px 8px 0;
+.checkbox-parts::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 23px;
+  height: 23px;
+  border: 2px solid #79808a;
+  border-radius: 4px;
 }
 
-.block-icon {
-  display: flex;
-  justify-content: flex-end;
-  float: right;
-  width: 30%;
+.checkbox-input:checked + .checkbox-parts::after {
+  display: block;
+  position: absolute;
+  top: -2px;
+  left: 13px;
+  width: 11px;
+  height: 19px;
+  transform: rotate(40deg);
+  border-right: 3px solid red;
+  border-bottom: 3px solid red;
+  content: "";
 }
 
-.block-icon li {
-  font-size: 30px;
-  margin-right: 12px;
-}
-
-.block-icon li:last-child {
-  margin-right: 0;
+.checkbox-input:checked + .checkbox-parts::before {
+  border: 2px solid red;
 }
